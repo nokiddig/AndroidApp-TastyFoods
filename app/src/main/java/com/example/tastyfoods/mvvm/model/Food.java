@@ -1,20 +1,31 @@
-package com.example.tastyfoods.data.model;
+package com.example.tastyfoods.mvvm.model;
 
 public class Food {
-    private String name;
-    private String description;
-    private String image;
-    private double ratePoint;
-    private int price;
-    private String categoryId;
 
-    public Food(String name, String description, String image, double ratePoint, int price, String categoryId) {
+    private int foodId;
+    private String name, description, image;
+    private double ratePoint;
+    private int price, categoryId;
+
+    public Food(int foodId, String name, String description, String image, double ratePoint, int price, int categoryId) {
+        this.foodId = foodId;
         this.name = name;
         this.description = description;
         this.image = image;
         this.ratePoint = ratePoint;
         this.price = price;
         this.categoryId = categoryId;
+    }
+
+    public Food() {
+    }
+
+    public int getFoodId() {
+        return foodId;
+    }
+
+    public void setFoodId(int foodId) {
+        this.foodId = foodId;
     }
 
     public String getName() {
@@ -57,11 +68,11 @@ public class Food {
         this.price = price;
     }
 
-    public String getCategoryId() {
+    public int getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(String categoryId) {
+    public void setCategoryId(int categoryId) {
         this.categoryId = categoryId;
     }
 }
