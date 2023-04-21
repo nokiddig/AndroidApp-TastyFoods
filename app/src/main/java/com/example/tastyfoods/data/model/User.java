@@ -1,16 +1,15 @@
 package com.example.tastyfoods.data.model;
 
-public class User {
-    private  String name, userId, address;
-    private int money;
-    private String phoneNumber;
-    private String password;
-    private String image;
-    private String birthday;
+import java.util.Date;
 
-    public User(String name, String userId, String address, int money, String phoneNumber, String password, String image, String birthday) {
+public class User {
+    private  String name, address;
+    private int money;
+    private String phoneNumber, password, image;
+    private Date birthday;
+
+    public User(String name, String address, int money, String phoneNumber, String password, String image, Date birthday) {
         this.name = name;
-        this.userId = userId;
         this.address = address;
         this.money = money;
         this.phoneNumber = phoneNumber;
@@ -25,14 +24,6 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
     }
 
     public String getAddress() {
@@ -75,11 +66,11 @@ public class User {
         this.image = image;
     }
 
-    public String getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(String birthday) {
+    public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 }
