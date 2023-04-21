@@ -1,15 +1,30 @@
 package com.example.tastyfoods.data.model;
 
 public class BillDetail {
-    private  String billDetaild;
+    private  int billDetailId, billId;
     private int money, amount;
 
-    public String getBillDetaild() {
-        return billDetaild;
+    public BillDetail(int billDetailId, int billId, int money, int amount) {
+        this.billDetailId = billDetailId;
+        this.billId = billId;
+        this.money = money;
+        this.amount = amount;
     }
 
-    public void setBillDetaild(String billDetaild) {
-        this.billDetaild = billDetaild;
+    public int getBillId() {
+        return billId;
+    }
+
+    public void setBillId(int billId) {
+        this.billId = billId;
+    }
+
+    public int getBillDetailId() {
+        return billDetailId;
+    }
+
+    public void setBillDetailId(int billDetailId) {
+        this.billDetailId = billDetailId;
     }
 
     public int getMoney() {
@@ -25,12 +40,6 @@ public class BillDetail {
     }
 
     public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
-    public BillDetail(String billDetaild, int money, int amount) {
-        this.billDetaild = billDetaild;
-        this.money = money;
         this.amount = amount;
     }
 }

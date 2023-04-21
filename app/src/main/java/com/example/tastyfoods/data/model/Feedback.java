@@ -1,15 +1,14 @@
 package com.example.tastyfoods.data.model;
 
 public class Feedback {
-    private  String Id, content;
-    private double ratePoint;
+    private  String content;
+    private int ratePoint, feedbackId, foodId;
 
-    public String getId() {
-        return Id;
-    }
-
-    public void setId(String id) {
-        Id = id;
+    public Feedback(String content, int ratePoint, int feedbackId, int foodId) {
+        this.content = content;
+        this.ratePoint = ratePoint;
+        this.feedbackId = feedbackId;
+        this.foodId = foodId;
     }
 
     public String getContent() {
@@ -20,17 +19,27 @@ public class Feedback {
         this.content = content;
     }
 
-    public double getRatePoint() {
+    public int getRatePoint() {
         return ratePoint;
     }
 
-    public void setRatePoint(double ratePoint) {
+    public void setRatePoint(int ratePoint) {
         this.ratePoint = ratePoint;
     }
 
-    public Feedback(String id, String content, double ratePoint) {
-        Id = id;
-        this.content = content;
-        this.ratePoint = ratePoint;
+    public int getFeedbackId() {
+        return feedbackId;
+    }
+
+    public void setFeedbackId(int feedbackId) {
+        this.feedbackId = feedbackId;
+    }
+
+    public int getFoodId() {
+        return foodId;
+    }
+
+    public void setFoodId(int foodId) {
+        this.foodId = foodId;
     }
 }

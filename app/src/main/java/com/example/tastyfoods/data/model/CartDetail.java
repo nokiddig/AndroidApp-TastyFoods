@@ -1,21 +1,30 @@
 package com.example.tastyfoods.data.model;
 
 public class CartDetail {
-    private String cartDetaild;
+    private int cartDetailId, userId;
     private int money, amount;
 
-    public CartDetail(String cartDetaild, int money, int amount) {
-        this.cartDetaild = cartDetaild;
+    public CartDetail(int cartDetailId, int userId, int money, int amount) {
+        this.cartDetailId = cartDetailId;
+        this.userId = userId;
         this.money = money;
         this.amount = amount;
     }
 
-    public String getCartDetaild() {
-        return cartDetaild;
+    public int getCartDetailId() {
+        return cartDetailId;
     }
 
-    public void setCartDetaild(String cartDetaild) {
-        this.cartDetaild = cartDetaild;
+    public void setCartDetailId(int cartDetailId) {
+        this.cartDetailId = cartDetailId;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public int getMoney() {

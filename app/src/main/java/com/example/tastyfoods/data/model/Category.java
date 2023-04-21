@@ -1,17 +1,22 @@
 package com.example.tastyfoods.data.model;
 
 public class Category {
-    private String name;
-    private String image;
-    private String description;
+    private String name, image, description;
+    private int categoryId;
 
-    private String categotyId;
-
-    public Category(String name, String image, String description, String categotyId) {
+    public Category(String name, String image, String description, int categoryId) {
         this.name = name;
         this.image = image;
         this.description = description;
-        this.categotyId = categotyId;
+        this.categoryId = categoryId;
+    }
+
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getName() {
@@ -38,11 +43,4 @@ public class Category {
         this.description = description;
     }
 
-    public String getCategotyId() {
-        return categotyId;
-    }
-
-    public void setCategotyId(String categotyId) {
-        this.categotyId = categotyId;
-    }
 }
